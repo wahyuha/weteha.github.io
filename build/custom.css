@@ -1,0 +1,62 @@
+.konten {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 85px;
+}
+.konlro {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.konts {
+    margin-top: 70px;
+}
+.konlrp {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.mart10 {
+    position: relative;
+    bottom: -16px;
+}
+.footer {
+    margin-top: 20px;
+    padding: 15px;
+    background: #1B1C1D;
+    color: rgba(255, 255, 255, 0.9);
+}
+.notshow {
+    visibility: : hidden;
+}
+.load_jdw {
+    color: #fff !important;
+    margin-top: 120px !important;
+}
+.padtb5 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+.marto {
+    margin-top: 0 !important;
+}
+.marbo {
+    margin-bottom: 0 !important;
+}
+.searchbar {
+    line-height: 0.5 !important;
+    font-size: 0.75rem !important;
+}
+.srbox {
+    padding: 10px;
+    background-color: #fff;
+}
+.b7 {
+    color: #b7b7b7;
+}
+.mar0 {
+    margin: 0 !important;
+}
+.marle {
+    margin-left: 30px;
+}
