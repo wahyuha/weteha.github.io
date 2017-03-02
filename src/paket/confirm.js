@@ -1,6 +1,7 @@
 import React from 'react'
 import { Message, Table, Label, Header, Icon, Button, Form, Dimmer, Loader } from 'semantic-ui-react'
 import { Link } from 'react-router'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 export default class Confirm extends React.Component{
     constructor() {
@@ -50,64 +51,70 @@ export default class Confirm extends React.Component{
 
         return (
             <div>
-                <div className={'konten'}>
-                    <Message icon color='black'>
-                        <Icon name='info bell' />
-                        <Message.Content>
-                          <Message.Header>Konfirmasi</Message.Header>
-                          Konfirmasi pesanan katering
-                        </Message.Content>
-                    </Message>
-                    <Table unstackable>
-                        <Table.Body>
-                            <Table.Row>
-                              <Table.Cell>
-                                  <Header as='h5'>Berikut detail pesanan katering Anda :</Header>
-                             </Table.Cell>
-                            </Table.Row>
-                            <Table.Row positive>
-                              <Table.HeaderCell>
-                                  <div>
-                                      <p>
-                                          <Header as='h5'>Hisana katering</Header>
-                                          <div>Paket 1 - Rp 20.000.000</div>
-                                          <div>200 pax</div>
-                                      </p>
-                                      <p>
-                                          <Header as='h5'>Lokasi & Waktu</Header>
-                                          <div>Jl. Raya Bogor km 34 no. 17</div>
-                                          <div>19 Maret 2017 - 11.00 s/d 14.00</div>
-                                      </p>
-                                  </div>
-                              </Table.HeaderCell>
-                            </Table.Row>
-                            <Table.Row>
-                              <Table.Cell>
-                                  <Form>
-                                      <Form.Field>
-                                        <label>Nama</label>
-                                        <input placeholder='Masukkan nama Anda' />
-                                        <Label basic color='red' pointing>Masukkan nama Anda</Label>
-                                      </Form.Field>
-                                      <Form.Field>
-                                        <label>Telepon</label>
-                                        <input placeholder='Masukkan nomor handphone' />
-                                        <Label basic color='red' pointing>Format nomor hp tidak sesuai</Label>
-                                      </Form.Field>
-                                  </Form>
-                              </Table.Cell>
-                            </Table.Row>
-                        </Table.Body>
-                    </Table>
-                    <Button.Group fluid>
-                        <Button as={Link} to='/'>Batal</Button>
-                        <Button.Or />
-                        <Button
-                            positive
-                            onClick={this.handleOpen}
-                        >Kirim Permintaan</Button>
-                    </Button.Group>
-                </div>
+                <ReactCSSTransitionGroup
+                    transitionName="slide"
+                    transitionAppear={true}
+                    transitionAppearTimeout={300}
+                    >
+                    <div className={'konten'}>
+                        <Message icon color='black'>
+                            <Icon name='info bell' />
+                            <Message.Content>
+                              <Message.Header>Konfirmasi</Message.Header>
+                              Konfirmasi pesanan katering
+                            </Message.Content>
+                        </Message>
+                        <Table unstackable>
+                            <Table.Body>
+                                <Table.Row>
+                                  <Table.Cell>
+                                      <Header as='h5'>Berikut detail pesanan katering Anda :</Header>
+                                 </Table.Cell>
+                                </Table.Row>
+                                <Table.Row positive>
+                                  <Table.HeaderCell>
+                                      <div>
+                                          <p>
+                                              <Header as='h5'>Hisana katering</Header>
+                                              <div>Paket 1 - Rp 20.000.000</div>
+                                              <div>200 pax</div>
+                                          </p>
+                                          <p>
+                                              <Header as='h5'>Lokasi & Waktu</Header>
+                                              <div>Jl. Raya Bogor km 34 no. 17</div>
+                                              <div>19 Maret 2017 - 11.00 s/d 14.00</div>
+                                          </p>
+                                      </div>
+                                  </Table.HeaderCell>
+                                </Table.Row>
+                                <Table.Row>
+                                  <Table.Cell>
+                                      <Form>
+                                          <Form.Field>
+                                            <label>Nama</label>
+                                            <input placeholder='Masukkan nama Anda' />
+                                            <Label basic color='red' pointing>Masukkan nama Anda</Label>
+                                          </Form.Field>
+                                          <Form.Field>
+                                            <label>Telepon</label>
+                                            <input placeholder='Masukkan nomor handphone' />
+                                            <Label basic color='red' pointing>Format nomor hp tidak sesuai</Label>
+                                          </Form.Field>
+                                      </Form>
+                                  </Table.Cell>
+                                </Table.Row>
+                            </Table.Body>
+                        </Table>
+                        <Button.Group fluid>
+                            <Button as={Link} to='/'>Batal</Button>
+                            <Button.Or />
+                            <Button
+                                positive
+                                onClick={this.handleOpen}
+                            >Kirim Permintaan</Button>
+                        </Button.Group>
+                    </div>
+                </ReactCSSTransitionGroup>
                 <Dimmer
                   active={active}
                   onClickOutside={this.handleClose}
